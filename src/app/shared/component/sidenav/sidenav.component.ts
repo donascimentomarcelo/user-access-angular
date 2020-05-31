@@ -1,3 +1,4 @@
+import { MenuItem } from './../../models/menu-item';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,6 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class SidenavComponent implements OnInit {
 
   public isMenuOpen = false;
+  public menuItems: MenuItem[] = [
+    { key: '/profile', value: 'Perfil', icon: 'person' },
+    { key: '/all', value: 'Listar', icon: 'table_rows' },
+    { key: '/logout', value: 'Sair', icon: 'logout' },
+  ];
 
   constructor() { }
 

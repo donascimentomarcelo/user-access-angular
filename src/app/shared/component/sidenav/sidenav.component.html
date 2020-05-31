@@ -1,11 +1,10 @@
 <app-navbar [isMenuOpen]="isMenuOpen" [sidenav]="sidenav"></app-navbar>
 <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #sidenav (click)="onSidenavClick()" autoFocus="false" mode="over" [(opened)]="isMenuOpen" class="sidenav">
-        <a mat-button routerLink="/page1">Page 1</a>
-        <a mat-button routerLink="/page2">Page 2</a>
-        <a mat-button routerLink="/page3">Page 3</a>
-        <a mat-button routerLink="/page4">Page 4</a>
-        <a mat-button routerLink="/page5">Page 5</a>
+        <a *ngFor="let menu of menuItems" mat-button [routerLink]="menu.key">
+            <mat-icon>{{ menu.icon }}</mat-icon>
+            <span class="text-item">{{ menu.value }}</span>
+        </a>
     </mat-sidenav>
     <mat-sidenav-content>
         <main>

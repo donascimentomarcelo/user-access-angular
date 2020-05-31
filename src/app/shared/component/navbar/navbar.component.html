@@ -1,12 +1,9 @@
 <div class="page-container">
     <header>
         <div>
-            <button (click)="sidenav.toggle()" mat-button class="menu-button" button>
+            <div (click)="sidenav.toggle()" class="menu-button" button>
                 <mat-icon>{{ isMenuOpen ? "close" : "menu" }}</mat-icon>
-            </button>
-            <a routerLink="/">
-                <span class="app-title">User Access</span>
-            </a>
+            </div>
         </div>
     </header>
 </div>

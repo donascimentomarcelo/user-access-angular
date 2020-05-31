@@ -1,14 +1,17 @@
 import { CoreModule } from './core/core.module';
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { NavbarComponent } from './shared/component/navbar/navbar.component';
+import { SidenavComponent } from './shared/component/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    SidenavComponent,
   ],
   imports: [
     CoreModule,

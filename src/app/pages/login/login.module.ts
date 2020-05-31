@@ -9,7 +9,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
   declarations: [LoginFormComponent],
   imports: [
     SharedModule,
-    LoginRoutingModule
+    LoginRoutingModule,
   ]
 })
 export class LoginModule { }

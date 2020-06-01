@@ -1,31 +1,35 @@
 $link-color: #000;
 
 .sidenav-container {
-    flex: 1;
-    height: 100vw;
+  flex: 1;
+  height: 100vw;
 
-    .sidenav {
-        min-width: 240px;
+  .sidenav {
+    min-width: 240px;
 
-        a {
-            display: block;
-            padding: 6px 24px;
-            width: 100%;
-            text-align: left;
-            text-decoration: none;
-            color: $link-color;
-        }
+    a {
+      display: block;
+      padding: 20px 24px;
+      width: 100%;
+      text-align: left;
+      text-decoration: none;
+      color: $link-color;
     }
+  }
 
-    main {
-        padding: 18px 24px;
-    }
+  main {
+    padding: 18px 24px;
+  }
 
-    .text-item {
-        font-size:15px;
-    }
+  .text-item {
+    font-size: 15px;
+  }
 
-    .material-icons {
-        font-size: 15px;
-    }
+  .material-icons {
+    font-size: 15px;
+  }
+
+  .mat-drawer-inner-container {
+    padding-top: 30px !important;
+  }
 }

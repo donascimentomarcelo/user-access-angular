@@ -4,39 +4,39 @@ $header-backgound-color: #3f51b5;
 $header-color: #fff;
 
 .page-container {
-    background: $container-backgound-color;
-    color: $container-color;
+  background: $container-backgound-color;
+  color: $container-color;
+
+  display: flex;
+  flex-direction: column;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  header {
+    background: $header-backgound-color;
+    color: $header-color;
+
+    padding: 18px 24px;
+
+    font-size: 14px;
+    font-weight: bold;
 
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 
-    a {
-        color: inherit;
-        text-decoration: none;
+    .menu-button {
+      margin-right: 24px;
+      min-width: 0;
+      padding: 0;
+      line-height: normal;
+      cursor: pointer;
     }
 
-    header {
-        background: $header-backgound-color;
-        color: $header-color;
-        
-        padding: 18px 24px;
-
-        font-size: 14px;
-        font-weight: bold;
-
-        display: flex;
-        justify-content: space-between;
-
-        .menu-button {
-            margin-right: 24px;
-            min-width: 0;
-            padding: 0;
-            line-height: normal;
-            cursor: pointer;
-        }
-
-        .app-title {
-            padding: 0 3px;
-        }
+    .app-title {
+      padding: 0 3px;
     }
+  }
 }

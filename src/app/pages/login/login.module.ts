@@ -1,3 +1,4 @@
+import { CoreModule } from './../../core/core.module';
 import { SharedModule } from './../../shared/shared.module';
 import { NgModule } from '@angular/core';
 
@@ -9,6 +10,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
   declarations: [LoginFormComponent],
   imports: [
     SharedModule,
+    CoreModule,
     LoginRoutingModule,
   ]
 })

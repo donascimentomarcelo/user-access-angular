@@ -1,0 +1,10 @@
+<form [formGroup]="form" (ngSubmit)="submit()" class="form-container">
+    <mat-card>
+        <mat-card-content>
+            <ng-content #form></ng-content>
+        </mat-card-content>
+        <mat-card-actions>
+            <ng-content #buttons></ng-content>
+        </mat-card-actions>
+    </mat-card>
+</form>

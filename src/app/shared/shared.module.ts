@@ -12,6 +12,7 @@ import {
 } from '@angular/material';
 
 import { CardComponent } from './component/card/card.component';
+import { CardFormComponent } from './component/card-form/card-form.component';
 
 const sharedModules = [
   FormsModule,
@@ -25,6 +26,7 @@ const sharedModules = [
 
 const sharedDeclarations = [
   CardComponent,
+  CardFormComponent,
 ];
 
 const sharedServices = [

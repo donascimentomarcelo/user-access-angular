@@ -22,4 +22,6 @@ export class LoginFormComponent implements OnInit {
       password: [null, [Validators.required]]
     });
   }
+
+  submit = () => console.log(this.form.value);
 }

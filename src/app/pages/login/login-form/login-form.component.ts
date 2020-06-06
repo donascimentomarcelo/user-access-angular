@@ -1,3 +1,4 @@
+import { StorageService } from './../../../services/storage.service';
 import { AuthService } from './../../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -14,7 +15,8 @@ export class LoginFormComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private authService: AuthService) { }
+    private authService: AuthService,
+    private storageService: StorageService,) { }
 
   ngOnInit() {
     this.form = this.buildForm();
@@ -31,7 +33,9 @@ export class LoginFormComponent implements OnInit {
     this.authService.auth(this.form.value)
       .subscribe(response => {
         const token = response.headers.get('Authorization').substring(7);
-        console.log(UserLS.decodeToken(token));
+        const username = UserLS.decodeToken(token);
+        const ls = new UserLS(token, username);
+        this.storageService.setUser(ls);
       });
   }
 }

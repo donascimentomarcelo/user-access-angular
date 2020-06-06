@@ -3,6 +3,7 @@ import { AuthService } from './../../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserLS } from 'src/app/models/user-ls';
+import { Constants } from 'src/app/constants/constants';
 
 @Component({
   selector: 'app-login-form',
@@ -16,7 +17,7 @@ export class LoginFormComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
-    private storageService: StorageService,) { }
+    private storageService: StorageService) { }
 
   ngOnInit() {
     this.form = this.buildForm();
@@ -32,8 +33,8 @@ export class LoginFormComponent implements OnInit {
   submit(): void {
     this.authService.auth(this.form.value)
       .subscribe(response => {
-        const token = response.headers.get('Authorization').substring(7);
-        const username = UserLS.decodeToken(token);
+        const token = UserLS.extractToken(response.headers.get(Constants.AUTHORIZARION));
+        const username = UserLS.extractUsername(token);
         const ls = new UserLS(token, username);
         this.storageService.setUser(ls);
       });

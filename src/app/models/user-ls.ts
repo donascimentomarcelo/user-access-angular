@@ -1,3 +1,4 @@
+import { Constants } from 'src/app/constants/constants';
 import { JwtHelperService } from '@auth0/angular-jwt';
 
 export class UserLS {
@@ -9,5 +10,7 @@ export class UserLS {
 
     private static jwtHelper: JwtHelperService = new JwtHelperService();
 
-    public static decodeToken = (token: string) => UserLS.jwtHelper.decodeToken(token).sub;
+    public static extractUsername = (token: string) => UserLS.jwtHelper.decodeToken(token).sub;
+
+    public static extractToken = (token: string) => token.substring(Constants.SETE);
 }

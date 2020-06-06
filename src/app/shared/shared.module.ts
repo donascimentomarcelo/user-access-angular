@@ -11,8 +11,8 @@ import {
   MatButtonModule,
 } from '@angular/material';
 
-import { CardComponent } from './component/card/card.component';
-import { CardFormComponent } from './component/card-form/card-form.component';
+import { CardComponent } from './components/card/card.component';
+import { CardFormComponent } from './components/card-form/card-form.component';
 
 const sharedModules = [
   FormsModule,

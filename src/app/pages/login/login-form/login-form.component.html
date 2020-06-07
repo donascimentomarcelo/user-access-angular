@@ -5,7 +5,7 @@
             <input matInput formControlName="username" placeholder="Ex. pat@example.com">
             <mat-hint>Errors appear instantly!</mat-hint>
             <mat-error *ngIf="form.controls.username.hasError('required')">
-                Email is <strong>required</strong>
+                E-mail é <strong>obrigatório</strong>
             </mat-error>
         </mat-form-field>
         <mat-form-field class="field-full-width">
@@ -13,7 +13,7 @@
             <input type="password" matInput formControlName="password">
             <mat-hint>Errors appear instantly!</mat-hint>
             <mat-error *ngIf="form.controls.password.hasError('required')">
-                Email is <strong>required</strong>
+                Senha é <strong>obrigatória</strong>
             </mat-error>
         </mat-form-field>
     </div>

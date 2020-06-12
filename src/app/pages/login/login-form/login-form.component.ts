@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserLS } from 'src/app/models/user-ls';
 import { Constants } from 'src/app/constants/constants';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-form',
@@ -17,7 +18,8 @@ export class LoginFormComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
-    private storageService: StorageService) { }
+    private storageService: StorageService,
+    private router: Router) { }
 
   ngOnInit() {
     this.form = this.buildForm();
@@ -37,6 +39,7 @@ export class LoginFormComponent implements OnInit {
         const username = UserLS.extractUsername(token);
         const ls = new UserLS(token, username);
         this.storageService.setUser(ls);
+        this.router.navigate(['profile/', this.form.value.username]);
       });
   }
 }

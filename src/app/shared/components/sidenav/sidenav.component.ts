@@ -1,5 +1,6 @@
 import { MenuItem } from '../../models/menu-item';
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -10,16 +11,16 @@ export class SidenavComponent implements OnInit {
 
   public isMenuOpen = false;
   public menuItems: MenuItem[] = [
-    { key: '/profile', value: 'Perfil', icon: 'person' },
+    { key: `/profile/${this.storageService.getUser().username}`, value: 'Perfil', icon: 'person' },
     { key: '/all', value: 'Listar', icon: 'table_rows' },
     { key: '/logout', value: 'Sair', icon: 'logout' },
   ];
 
-  constructor() { }
+  constructor(
+    private storageService: StorageService,
+  ) { }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() { }
 
   onSidenavClick = () => this.isMenuOpen = false;
 

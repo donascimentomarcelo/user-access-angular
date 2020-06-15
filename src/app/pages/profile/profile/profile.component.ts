@@ -15,7 +15,7 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     const user = UserDto.fromEntity(this.route.snapshot.data.profile);
-    console.log(user);
+    console.log(user.username);
   }
 
 }

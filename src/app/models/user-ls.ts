@@ -12,5 +12,5 @@ export class UserLS {
 
     public static extractUsername = (token: string) => UserLS.jwtHelper.decodeToken(token).sub;
 
-    public static extractToken = (token: string) => token.substring(Constants.SETE);
+    public static extractToken = (token: string) => token.substring(Constants.SEVEN);
 }

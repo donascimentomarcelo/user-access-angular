@@ -1,6 +1,11 @@
 export class ClientDto {
     constructor(
-        public email: string,
-        public name: string,
+        public id?: string,
+        public email?: string,
+        public name?: string,
     ) { }
+
+    static fromEntity(json: any): ClientDto {
+        return Object.assign(new ClientDto(), json);
+    }
 }

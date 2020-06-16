@@ -15,4 +15,8 @@ export class ProfileService {
   findByUsername(username: string): UserDto | Observable<UserDto> | Promise<UserDto> {
     return this.http.get<UserDto>(`${env.apiUrl}${Paths.USERS}/findByUsername?username=${username}`);
   }
+
+  update(user: UserDto, id: string): Observable<UserDto> {
+    return this.http.put<UserDto>(`${env.apiUrl}${Paths.USERS}/${id}`, user);
+  }
 }

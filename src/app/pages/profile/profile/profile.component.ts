@@ -30,10 +30,9 @@ export class ProfileComponent implements OnInit {
   }
 
   submit = () => {
-    console.log(this.form);
-    // const user = UserDto.fromEntity(this.form.value);
-    // this.profileService.update(user, this.id)
-    //   .subscribe(resp => console.log(resp));
+    const user = UserDto.fromEntity(this.form.value);
+    this.profileService.update(user, this.id)
+      .subscribe(resp => console.log(resp));
   }
 
   private checkIfIsEditing(): void {

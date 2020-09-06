@@ -14,6 +14,8 @@ import { ClientDto } from 'src/app/models/client-dto';
 export class ProfileComponent implements OnInit {
 
   public form: FormGroup;
+  public controls = Constants.CONTROLS;
+  public invalid = Constants.INVALID;
   private id = null;
 
   constructor(
@@ -28,9 +30,10 @@ export class ProfileComponent implements OnInit {
   }
 
   submit = () => {
-    const user = UserDto.fromEntity(this.form.value);
-    this.profileService.update(user, this.id)
-      .subscribe(resp => console.log(resp));
+    console.log(this.form);
+    // const user = UserDto.fromEntity(this.form.value);
+    // this.profileService.update(user, this.id)
+    //   .subscribe(resp => console.log(resp));
   }
 
   private checkIfIsEditing(): void {

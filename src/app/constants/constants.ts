@@ -7,4 +7,6 @@ export abstract class Constants {
     static readonly NEW = 'new';
     static readonly ZERO = 0;
     static readonly SEVEN = 7;
+    static readonly CONTROLS = 'controls';
+    static readonly INVALID = 'INVALID';
 }

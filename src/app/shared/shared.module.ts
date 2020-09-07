@@ -9,6 +9,7 @@ import {
   MatIconModule,
   MatCardModule,
   MatButtonModule,
+  MatTableModule
 } from '@angular/material';
 
 import { CardComponent } from './components/card/card.component';
@@ -22,6 +23,7 @@ const sharedModules = [
   MatIconModule,
   MatCardModule,
   MatButtonModule,
+  MatTableModule,
 ];
 
 const sharedDeclarations = [

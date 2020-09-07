@@ -4,7 +4,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserDto } from 'src/app/models/user-dto';
 import { Constants } from 'src/app/constants/constants';
-import { ClientDto } from 'src/app/models/client-dto';
 
 @Component({
   selector: 'app-profile',

@@ -12,7 +12,7 @@ export class SidenavComponent implements OnInit {
   public isMenuOpen = false;
   public menuItems: MenuItem[] = [
     { key: `/profile/${this.storageService.getUser().username}`, value: 'Perfil', icon: 'person' },
-    { key: '/all', value: 'Listar', icon: 'table_rows' },
+    { key: '/users', value: 'Listar', icon: 'table_rows' },
     { key: '/logout', value: 'Sair', icon: 'logout' },
   ];
 
